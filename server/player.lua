@@ -561,9 +561,6 @@ function QBCore.Player.Save(source)
         return
     end
 
-    PlayerData.metadata.health = GetEntityHealth(ped)
-    PlayerData.metadata.armor = GetPedArmour(ped)
-
     CreateThread(function()
         UpsertPlayerEntity({
             playerEntity = PlayerData,
